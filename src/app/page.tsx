@@ -5,7 +5,6 @@ import React from 'react'
 import { Header } from '@/components/header'
 import { SoundButton } from '@/components/sound'
 import { ClearButton } from '@/components/clear-button'
-import { Footer } from '@/components/footer'
 import { useThemeStore } from '@/stores/theme-store'
 import { SaveComboButton } from '@/components/save-combo-button'
 import { sounds } from '@/sounds'
@@ -30,7 +29,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   )

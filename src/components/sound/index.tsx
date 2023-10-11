@@ -37,17 +37,17 @@ export const SoundButton: React.FC<SoundButtonProps> = ({ sound }) => {
   async function togglePlayPause() {
     const soundState = getSoundState(sound.id)
 
-    if (soundState.active) soundRef.current.play()
-    else soundRef.current.pause()
+    if (soundState?.active) soundRef.current?.play()
+    else soundRef.current?.pause()
 
-    setLocalSoundState(soundState)
+    setLocalSoundState(soundState!)
   }
 
   function updateSoundVolume() {
     const soundState = getSoundState(sound.id)
 
-    soundRef.current.volume(soundState.volume * globalVolume)
-    setLocalSoundState(soundState)
+    soundRef.current?.volume(soundState!.volume * globalVolume)
+    setLocalSoundState(soundState!)
   }
 
   useEffect(() => {
@@ -83,26 +83,26 @@ export const SoundButton: React.FC<SoundButtonProps> = ({ sound }) => {
   }, [soundsStore])
 
   useEffect(() => {
-    if (!getSoundState(sound.id).active) return
+    if (!getSoundState(sound.id)?.active) return
 
     switch (pomodoroStatus) {
       case PomodoroStatus.ticking:
       case PomodoroStatus.idle:
-        if (soundRef.current.volume() === 0) {
-          soundRef.current.volume(getSoundState(sound.id).volume * globalVolume)
+        if (soundRef.current?.volume() === 0) {
+          soundRef.current.volume(getSoundState(sound.id)!.volume * globalVolume)
         }
         break
 
       case PomodoroStatus.stopped:
-        if (soundRef.current.volume() > 0) {
-          soundRef.current.volume(0)
+        if (soundRef.current!.volume() > 0) {
+          soundRef.current!.volume(0)
         }
         break
     }
   }, [pomodoroStatus])
 
   useEffect(() => {
-    soundRef.current.volume(getSoundState(sound.id).volume * globalVolume)
+    soundRef.current!.volume(getSoundState(sound.id)!.volume * globalVolume)
   }, [globalVolume])
 
   const Icon = sound.icon
