@@ -8,6 +8,7 @@ export type Theme =
   | 'train'
   | 'waterfall'
   | 'camping-fire'
+  | 'star-wars'
 
 interface ThemeStore {
   theme: Theme

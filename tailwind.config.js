@@ -34,7 +34,8 @@ module.exports = {
         'blue-room-gif': 'url("/bg/blue-room.gif")',
         'train-gif': 'url("/bg/train.gif")',
         'waterfall-gif': 'url("/bg/waterfall.gif")',
-        'camping-fire-gif': 'url("/bg/camping-fire.gif")'
+        'camping-fire-gif': 'url("/bg/camping-fire.gif")',
+        'star-wars-gif': 'url("/bg/star-wars.gif")',
       },
       animation: {
         'background-change': 'background-change 300s 0s infinite',

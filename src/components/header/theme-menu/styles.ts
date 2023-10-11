@@ -10,7 +10,8 @@ export const triggerButton = tv({
       train: /*tw:*/ 'text-train',
       waterfall: /*tw:*/ 'text-waterfall',
       light: /*tw:*/ 'text-light-foreground',
-      'camping-fire': /*tw:*/ 'text-camping-fire'
+      'camping-fire': /*tw:*/ 'text-camping-fire',
+      'star-wars': /*tw:*/ 'text-dark-foreground'
     }
   }
 })
@@ -31,7 +32,8 @@ export const themeButton = tv({
       train: /*tw:*/ 'bg-train-gif',
       waterfall: /*tw:*/ 'bg-waterfall-gif',
       light: /*tw:*/ 'bg-light-background',
-      'camping-fire': /*tw:*/ 'bg-camping-fire-gif'
+      'camping-fire': /*tw:*/ 'bg-camping-fire-gif',
+      'star-wars': /*tw:*/ 'bg-star-wars-gif'
     },
     theme: {
       transition: /*tw:*/ 'text-white/80',
@@ -103,6 +105,6 @@ export const themeButton = tv({
       theme: ['camping-fire'],
       selected: true,
       class: /*tw:*/ 'border-camping-fire text-camping-fire'
-    }
+    },
   ]
 })

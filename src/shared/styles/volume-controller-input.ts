@@ -16,7 +16,9 @@ export const volumeControllerInput = tv({
       waterfall:
         /*tw:*/ 'bg-waterfall/30 from-waterfall to-waterfall [&::-moz-range-thumb]:bg-waterfall [&::-webkit-slider-thumb]:bg-waterfall',
       'camping-fire':
-        /*tw:*/ 'bg-camping-fire/30 from-camping-fire to-camping-fire [&::-moz-range-thumb]:bg-camping-fire [&::-webkit-slider-thumb]:bg-camping-fire'
+        /*tw:*/ 'bg-camping-fire/30 from-camping-fire to-camping-fire [&::-moz-range-thumb]:bg-camping-fire [&::-webkit-slider-thumb]:bg-camping-fire',
+      'star-wars':
+       /*tw:*/ 'bg-dark-foreground/30 from-dark-foreground to-dark-foreground [&::-moz-range-thumb]:bg-dark-foreground [&::-webkit-slider-thumb]:bg-dark-foreground',
     }
   }
 })

@@ -22,7 +22,8 @@ import {
   Waves,
   WhiteNoise,
   Wind,
-  ATATWalker
+  ATATWalker,
+
 } from '@/components/sound-icons'
 
 
@@ -241,6 +242,15 @@ export const sounds = [
     icon: ATATWalker,
     file: {
       url: '/sounds/atat_walk.ogg',
+      type: 'ogg'
+    }
+  },
+  {
+    id: 'cockpit',
+    title: 'Cockpit',
+    icon: AirPlane,
+    file: {
+      url: '/sounds/cockpit.ogg',
       type: 'ogg'
     }
   },
