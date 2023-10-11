@@ -21,8 +21,11 @@ import {
   Waterfall,
   Waves,
   WhiteNoise,
-  Wind
+  Wind,
+  ATATWalker
 } from '@/components/sound-icons'
+
+
 
 export const sounds = [
   {
@@ -31,7 +34,7 @@ export const sounds = [
     icon: Rain,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/rain.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -40,7 +43,7 @@ export const sounds = [
     icon: Storm,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/storm.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -49,7 +52,7 @@ export const sounds = [
     icon: Drops,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/drops.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -58,7 +61,7 @@ export const sounds = [
     icon: Wind,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/wind.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -67,7 +70,7 @@ export const sounds = [
     icon: Waves,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/waves.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -76,7 +79,7 @@ export const sounds = [
     icon: Underwater,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/underwater.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -85,7 +88,7 @@ export const sounds = [
     icon: StreamWater,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/stream-water.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -94,7 +97,7 @@ export const sounds = [
     icon: Waterfall,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/waterfall.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -103,7 +106,7 @@ export const sounds = [
     icon: BirdsTree,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/birds-tree.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -112,7 +115,7 @@ export const sounds = [
     icon: Leaves,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/leaves.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -121,7 +124,7 @@ export const sounds = [
     icon: Fire,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/fire.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -130,7 +133,7 @@ export const sounds = [
     icon: Cave,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/cave-drops.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -139,7 +142,7 @@ export const sounds = [
     icon: Night,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/night.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -148,7 +151,7 @@ export const sounds = [
     icon: Coffee,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/coffee.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -157,7 +160,7 @@ export const sounds = [
     icon: Train,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/train.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -166,7 +169,7 @@ export const sounds = [
     icon: AirPlane,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/air-plane.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -175,7 +178,7 @@ export const sounds = [
     icon: WashingMachine,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/washing-machine.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -184,7 +187,7 @@ export const sounds = [
     icon: Playground,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/playground.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -193,7 +196,7 @@ export const sounds = [
     icon: Boat,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/boat.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -202,7 +205,7 @@ export const sounds = [
     icon: RainOnTent,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/rain-on-tent.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -211,7 +214,7 @@ export const sounds = [
     icon: BrownNoise,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/brown-noise.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -220,7 +223,7 @@ export const sounds = [
     icon: WhiteNoise,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/white-noise.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
     }
   },
   {
@@ -229,7 +232,25 @@ export const sounds = [
     icon: PinkNoise,
     file: {
       url: 'https://cdn.noisekun.mateusf.com/sounds/pink-noise.ogg',
-      type: 'audio/ogg'
+      type: 'ogg'
+    }
+  },
+  {
+    id: 'at_at',
+    title: 'AT AT Walker',
+    icon: ATATWalker,
+    file: {
+      url: '/sounds/atat_walk.ogg',
+      type: 'ogg'
+    }
+  },
+  {
+    id: 'fan',
+    title: 'Fan',
+    icon: Wind,
+    file: {
+      url: '/sounds/fan.mp3',
+      type: 'mp3'
     }
   }
 ]

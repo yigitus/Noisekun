@@ -10,6 +10,9 @@ import { SoundState, useSoundsStateStore } from '@/stores/sounds-state-store'
 import { VolumeController } from './volume-controller'
 import { icon, soundButton } from './styles'
 
+import { Howl, Howler } from 'howler';
+
+
 interface SoundButtonProps {
   sound: Sound
 }
@@ -29,7 +32,7 @@ export const SoundButton: React.FC<SoundButtonProps> = ({ sound }) => {
   })
   const [loading, setIsLoading] = useState(true)
 
-  const soundRef = useRef<HTMLAudioElement>()
+  const soundRef = useRef<Howl>()
 
   async function togglePlayPause() {
     const soundState = getSoundState(sound.id)
@@ -43,7 +46,7 @@ export const SoundButton: React.FC<SoundButtonProps> = ({ sound }) => {
   function updateSoundVolume() {
     const soundState = getSoundState(sound.id)
 
-    soundRef.current.volume = soundState.volume * globalVolume
+    soundRef.current.volume(soundState.volume * globalVolume)
     setLocalSoundState(soundState)
   }
 
@@ -61,7 +64,13 @@ export const SoundButton: React.FC<SoundButtonProps> = ({ sound }) => {
     setSoundState(initialState)
     setLocalSoundState(initialState)
 
-    soundRef.current.load()
+    soundRef.current = new Howl({
+      src: [sound.file.url],
+      format: sound.file.type,
+      loop: true,
+      onload: () => setIsLoading(false),
+      onloaderror: (id, err) => console.error("howler error: " + err)
+    })
   }, [])
 
   useEffect(() => {
@@ -79,39 +88,31 @@ export const SoundButton: React.FC<SoundButtonProps> = ({ sound }) => {
     switch (pomodoroStatus) {
       case PomodoroStatus.ticking:
       case PomodoroStatus.idle:
-        if (soundRef.current.volume === 0) {
-          soundRef.current.volume =
-            getSoundState(sound.id).volume * globalVolume
+        if (soundRef.current.volume() === 0) {
+          soundRef.current.volume(getSoundState(sound.id).volume * globalVolume)
         }
         break
 
       case PomodoroStatus.stopped:
-        if (soundRef.current.volume > 0) {
-          soundRef.current.volume = 0
+        if (soundRef.current.volume() > 0) {
+          soundRef.current.volume(0)
         }
         break
     }
   }, [pomodoroStatus])
 
   useEffect(() => {
-    soundRef.current.volume = getSoundState(sound.id).volume * globalVolume
+    soundRef.current.volume(getSoundState(sound.id).volume * globalVolume)
   }, [globalVolume])
 
   const Icon = sound.icon
+
 
   return (
     <div
       title={sound.title}
       className="flex h-24 w-24 flex-col items-center justify-center"
     >
-      <audio
-        ref={soundRef}
-        onCanPlay={() => setIsLoading(false)}
-        preload="auto"
-        loop
-      >
-        <source src={sound.file.url} type={sound.file.type} />
-      </audio>
       <button
         data-umami-event={sound.title}
         className={soundButton({

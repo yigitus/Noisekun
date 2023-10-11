@@ -7,6 +7,11 @@
     "email": "contact@mateusf.com",
     "url": "https://github.com/mateusfg7"
   },
+  "contributors": [
+    {
+      "name": "yigitus"
+    }
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -22,6 +27,7 @@
     "@ducanh2912/next-pwa": "^9.4.0",
     "@headlessui/react": "1.7.17",
     "@newhighsco/next-plugin-svgr": "^3.0.104",
+    "howler": "^2.2.4",
     "next": "13.5.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -37,6 +43,7 @@
     "@tailwindcss/forms": "^0.5.4",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
+    "@types/howler": "^2.2.9",
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.7",
     "@types/react": "18.2.25",
